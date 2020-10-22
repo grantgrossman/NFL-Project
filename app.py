@@ -7,10 +7,9 @@ from bson.json_util import dumps
 app = Flask(__name__)
 # mongo = PyMongo(app, uri="mongodb://localhost:27017/sportsball")
 
-conn = "mongodb://localhost:27017"
-client = pymongo.MongoClient(conn)
+client = pymongo.MongoClient("mongodb+srv://grantgrossman:Babatunde5@nfl.l19sf.mongodb.net/sportsball?retryWrites=true&w=majority")
+db = client.test
 # # connect to mongo db and collection
-db = client.sportsball
 offense = db.offense
 defense = db.defense
 misc = db.misc

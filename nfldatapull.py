@@ -39,9 +39,9 @@ if __name__ == "__main__":
     x, y, z = pull_data()
     # print(x)
 
-    conn = "mongodb://localhost:27017"
+    conn = "mongodb+srv://grantgrossman:Babatunde5@nfl.l19sf.mongodb.net/sportsball?retryWrites=true&w=majority"
     client = pymongo.MongoClient(conn)
-    db = client.sportsball
+    db = client.test
     off = db.offense
     off.insert_many(x)
     defense = db.defense
